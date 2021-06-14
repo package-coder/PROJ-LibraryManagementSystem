@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBConnection {
-    private static final String PATH = "src/sample/dbutil/libredb.sqlite";
+    private static final String PATH = "HelloWorld/src/sample/dbutil/libredb.sqlite";
     private static final String SQCONN = "jdbc:sqlite:";
 
     public static Connection getConnection(){
