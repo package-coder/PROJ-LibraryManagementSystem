@@ -1,0 +1,44 @@
+@import url("fontStyle.css");
+
+*{
+    -fx-color-lightblue2: #f4f6fc;
+    -fx-color-lightblue1: #bfc5d2;
+    -fx-color-lightblue0: #b0bac9;
+    -fx-color-lightblue: #f2f9ff;
+
+    -fx-color-blue: #2e5bff;
+    -fx-color-dark-blue: #2e384d;
+    -fx-color-white: #fff;
+
+}
+
+.card{
+    -fx-background-color: -fx-color-white;
+    -fx-border-radius: 5px;
+    -fx-border-insets: 0;
+    -fx-background-insets: 0;
+}
+
+
+
+
+.list-view{
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+    -fx-padding: 0;
+}
+
+.list-view .list-cell{
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-border-color: gray;
+    -fx-padding: 15;
+    -fx-alignment: center;
+}
+
+.list-view .list-cell:hover,
+.list-view .list-cell:selected{
+    -fx-background-color: lightgray;
+    -fx-border-width: 0 0 0 4;
+    -fx-text-fill: gray;
+}
