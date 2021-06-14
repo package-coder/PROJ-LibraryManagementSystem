@@ -1,0 +1,19 @@
+
+#pane1{
+
+    -fx-background-color: #28193D;
+}
+
+.lbl-title{
+    -fx-font: bold 30 'Roboto';
+    -fx-text-fill: #28193D;
+}
+
+#main-pane{
+    -fx-background-color: #ded5eb;
+}
+
+.right-side-border{
+    -fx-border-color: #000;
+    -fx-border-width: 
+}

@@ -1,0 +1,111 @@
+
+.catalog{
+    -fx-background-color: #fffefe;
+    -fx-background-radius: 2px;
+    -fx-border-radius: 2px;
+}
+
+.catalog-header{
+    -fx-background-color: #fffefe;
+}
+
+.catalog-header-title{
+    -fx-font-family: "Poppins-Black";
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+}
+
+.catalog-header-title:hover{
+    -fx-text-fill: #1075ee;
+}
+
+.catalog-header-field, .catalog-header-menu{
+    -fx-border-color: lightgray;
+    -fx-background-color: transparent;
+    -fx-border-width: .5;
+    -fx-border-radius: 30%;
+    -fx-padding: 5 5 5 10;
+}
+.catalog-header-menu{
+    -fx-padding: 0;
+    -fx-text-fill: lightgray;
+}
+
+.catalog-header-field:hover,
+.catalog-header-field:focused,
+.catalog-header-menu:hover,
+.catalog-header-menu:focused{
+    -fx-border-color: #1075ee;
+}
+
+.catalog-header-tiles{
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+    -fx-background-color: #f2f9ff;
+    -fx-background-radius: 5px;
+}
+
+.table-view{
+    -fx-border-insets: 0;
+    -fx-background-color: #fffefe;
+    -fx-border-width: .5;
+    -fx-border-color: lightgray;
+}
+
+.table-view .corner,
+.table-view .column-header-background .filler{
+    -fx-background-color: #fffefe;
+}
+
+
+.table-view .column-header{
+    -fx-background-color: #fffefe;
+    -fx-border-width: 0 .5 .5 0;
+    -fx-border-color: lightgray;
+}
+
+.table-view .column-header .label{
+    -fx-padding: 13 0;
+    -fx-font-family: "Roboto-Bold";
+    -fx-font-size: 11.5;
+}
+
+.table-view .table-cell {
+    -fx-border-width: 0;
+    -fx-alignment: center;
+}
+
+.table-view .table-cell .label{
+    -fx-font-family: "Roboto";
+    -fx-font-size: 8;
+}
+
+.table-row-cell:even,
+.table-row-cell:odd{
+    -fx-background-color: #fffefe;
+    -fx-border-insets: 0;
+}
+
+.table-row-cell:hover,
+.table-row-cell:selected{
+    -fx-border-insets: 0;
+    -fx-text-background-color: #1075ee;
+    -fx-background-color: #f2f9ff;
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+    -fx-border-width: .3;
+    -fx-border-color: #1075ee;
+}
+
+.table-view .virtual-flow .scroll-bar:vertical,
+.table-view .virtual-flow .scroll-bar:vertical .track,
+.table-view .virtual-flow .scroll-bar:horizontal,
+.table-view .virtual-flow .scroll-bar:horizontal .track{
+    -fx-background-color: transparent;
+}
+
+/*
+    -fx-tree-table-color: rgba(82, 100, 174, 0.4);
+    -fx-tree-table-rippler-color: rgba(82, 100, 174, 0.6);
+
+ */

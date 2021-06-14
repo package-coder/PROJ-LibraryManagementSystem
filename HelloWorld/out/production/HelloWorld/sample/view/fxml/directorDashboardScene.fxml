@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="507.0" prefWidth="758.0" styleClass="parent" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <stylesheets>
+      <URL value="@../css/fontStyle.css" />
+      <URL value="@../css/directorDashboardStyle.css" />
+   </stylesheets>
+   <children>
+      <VBox alignment="CENTER_LEFT" layoutX="60.0" layoutY="36.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="Dashboard" VBox.vgrow="NEVER" />
+            <VBox alignment="CENTER_LEFT" styleClass="plate-border" VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER_LEFT" VBox.vgrow="NEVER">
+                     <children>
+                        <VBox alignment="CENTER_LEFT" styleClass="plate-top-left" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label styleClass="plate-top-left-title" text="QUICK ACCESS" VBox.vgrow="NEVER">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox alignment="CENTER_LEFT" VBox.vgrow="NEVER">
+                                 <styleClass>
+                                    <String fx:value="plate" />
+                                    <String fx:value="plate-top-left-box" />
+                                 </styleClass>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" HBox.hgrow="NEVER">
+                           <children>
+                              <Label text="3:00pm">
+                                 <styleClass>
+                                    <String fx:value="plate-top-right-text" />
+                                    <String fx:value="plate-top-right-text-time" />
+                                 </styleClass>
+                              </Label>
+                              <Label layoutX="25.0" layoutY="57.0" styleClass="plate-top-right-text" text="June 13, Sun" />
+                           </children>
+                           <styleClass>
+                              <String fx:value="plate" />
+                              <String fx:value="plate-top-right" />
+                           </styleClass>
+                        </VBox>
+                     </children>
+                     <styleClass>
+                        <String fx:value="plate" />
+                        <String fx:value="plate-top" />
+                     </styleClass>
+                  </HBox>
+                  <HBox alignment="CENTER" styleClass="plate-center-border" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox alignment="CENTER_LEFT" styleClass="plate-center-left-border" HBox.hgrow="ALWAYS">
+                           <children>
+                              <VBox alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Label styleClass="plate-top-left-title" text="IMPORTANT ANNOUNCMENTS" />
+                                    <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" VBox.vgrow="ALWAYS">
+                                       <content>
+                                          <VBox alignment="TOP_CENTER" prefHeight="150.0" />
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="plate" />
+                                    <String fx:value="plate-center-left-pos0" />
+                                 </styleClass>
+                              </VBox>
+                              <VBox VBox.vgrow="NEVER">
+                                 <children>
+                                    <Label text="Daily Report" />
+                                    <HBox styleClass="plate-center-left-bottom-border">
+                                       <children>
+                                          <VBox styleClass="plate" HBox.hgrow="SOMETIMES">
+                                             <children>
+                                                <VBox alignment="TOP_CENTER">
+                                                   <children>
+                                                      <Label styleClass="plate-top-left-title" text="BOOK RETURNED" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox styleClass="plate" HBox.hgrow="SOMETIMES">
+                                             <children>
+                                                <VBox alignment="TOP_CENTER">
+                                                   <children>
+                                                      <Label styleClass="plate-top-left-title" text="BOOK BORROWED" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox styleClass="plate">
+                                             <children>
+                                                <VBox alignment="TOP_CENTER">
+                                                   <children>
+                                                      <Label styleClass="plate-top-left-title" text="BOOK ON DUE" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" styleClass="plate" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label styleClass="plate-top-left-title" text="NOTIFICATIONS" />
+                              <ScrollPane fitToWidth="true" hbarPolicy="NEVER" VBox.vgrow="ALWAYS">
+                                 <content>
+                                    <VBox />
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

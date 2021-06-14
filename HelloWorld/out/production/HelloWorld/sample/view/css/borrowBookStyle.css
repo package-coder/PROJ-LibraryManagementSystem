@@ -1,0 +1,91 @@
+
+.body{
+    -fx-background-color: #fffefe;
+    -fx-background-radius: 2px;
+    -fx-border-radius: 2px;
+}
+
+.body-titles,
+.body-right-title{
+    -fx-font-family: "Poppins-Black";
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+}
+
+.body-fields-title{
+    -fx-font-family: "Roboto";
+    -fx-font-size: 11px;
+    -fx-text-fill: Black;
+}
+
+.body-fields{
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+    -fx-padding: 5;
+    -fx-border-color: lightgray;
+    -fx-border-radius: 5px;
+    -fx-border-width: .5;
+    -fx-background-color: transparent;
+}
+
+.body-fields:disabled{
+    -fx-background-color: #f0f1f8;
+}
+
+.body-fields:hover,
+.body-fields:focused{
+    -fx-border-color: #1075ee;
+    -fx-background-color: #f2f9ff;
+    -fx-background-radius: 5px;
+}
+
+.body-fields:invalid{
+    -fx-border-color: tomato;
+    -fx-background-color: #FFE2DC;
+}
+
+.body-buttons{
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+    -fx-background-color: transparent;
+    -fx-border-color: lightgray;
+    -fx-border-radius: 3px;
+    -fx-border-width: .5;
+}
+
+.body-buttons:hover{
+    -fx-background-color: #1075ee;
+    -fx-border-color: #1075ee;
+    -fx-text-fill: white;
+}
+
+
+.body-right{
+    -fx-background-color: #1075ee;
+}
+
+.body-right-title{
+    -fx-text-fill: white;
+}
+
+.body-right-QRView{
+    -fx-background-color: #fffefe;
+    -fx-background-radius: 15px;
+}
+
+.body-right-buttons{
+    -fx-border-insets: 0;
+    -fx-background-insets: 0;
+    -fx-font-family: "Poppins-Black";
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+    -fx-background-color: #202835;
+    -fx-text-fill: #fffefe;
+}
+
+.body-right-buttons:hover,
+.body-right-buttons:focused{
+    -fx-background-color: #fffefe;
+    -fx-text-fill: #1075ee;
+}
+

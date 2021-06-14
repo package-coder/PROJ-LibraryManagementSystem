@@ -1,0 +1,100 @@
+@import url("style.css");
+
+.parent{
+    -fx-background-color: -fx-color-lightblue2;
+}
+
+.navigation-border,
+.navigation-bar-center{
+    -fx-background-color: transparent;
+}
+
+.navigation-bar{
+    -fx-background-color: -fx-color-white;
+}
+
+.navigation-bar-left{
+    -fx-padding: 4em 0 0 0;
+    -fx-border-width: 0 1px 0 0;
+    -fx-border-color: -fx-color-lightblue2;
+    -fx-min-width: 12em;
+    -fx-spacing: 3px;
+}
+
+.navigation-bar-left-tile{
+    -fx-padding: 1em 2em;
+    -fx-font-size: 1.05em;
+    -fx-spacing: 3px;
+}
+
+.navigation-bar-left-tile-image{
+    -fx-fit-to-height: 1em;
+    -fx-fit-to-width: 1em;
+}
+
+.navigation-bar-left-tile-title{
+    -fx-font-family: "Rubik Medium";
+    -fx-text-fill: -fx-color-dark-blue;
+}
+
+.navigation-bar-left-tile-user{
+    -fx-font-family: "Rubik";
+    -fx-text-fill: -fx-color-lightblue1;
+}
+
+.navigation-bar-top{
+    -fx-border-width: 0 0 1px 0;
+    -fx-border-color: -fx-color-lightblue2;
+}
+
+.navigation-bar-top-hbox{
+    -fx-padding: 1em 5em;
+}
+
+.navigation-bar-top-items{
+    -fx-padding: .3em .5em;
+}
+
+.navigation-bar-top-title{
+    -fx-font-family: "Rubik Medium";
+    -fx-text-fill: -fx-color-dark-blue;
+    -fx-font-size: 1.08em;
+}
+
+.navigation-bar-top-menu{
+    -fx-font-family: "Rubik";
+    -fx-text-fill: -fx-color-lightblue1;
+    -fx-font-size: 1.05em;
+
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+    -fx-background-color: transparent;
+}
+
+.navigation-bar-top-menu:hover,
+.navigation-bar-top-menu:selected {
+    -fx-text-fill: -fx-color-blue;
+    -fx-background-color: -fx-color-lightblue;
+}
+
+.list-view{
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+}
+
+.list-view .list-cell{
+    -fx-font-family: "Rubik";
+    -fx-text-fill: -fx-color-lightblue1;
+    -fx-font-size: 1.05em;
+
+    -fx-padding: 1em 2em;
+    -fx-alignment: center-left;
+}
+
+.list-view .list-cell:hover,
+.list-view .list-cell:selected{
+    -fx-border-width: 0 0 0 0.2em;
+    -fx-background-color: -fx-color-lightblue;
+    -fx-text-fill: -fx-color-blue;
+    -fx-border-color: -fx-color-blue;
+}

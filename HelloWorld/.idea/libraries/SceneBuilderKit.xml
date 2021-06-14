@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="SceneBuilderKit">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/jfoenix-9.0.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/scenebuilder-8.5.0-all.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/scenebuilder-kit-16.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

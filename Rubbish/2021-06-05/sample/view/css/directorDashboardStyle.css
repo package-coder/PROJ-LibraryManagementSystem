@@ -1,0 +1,86 @@
+
+.body{
+    -fx-background-color: #f0f1f8;
+}
+
+.grid{
+
+}
+
+.grid-plates{
+
+}
+
+.grid-plates-pane{
+    -fx-background-radius: 3px;
+    -fx-border-radius: 3px;
+    -fx-background-color: #fffefe;
+}
+
+.grid-plates-title{
+    -fx-font-family: "Poppins-Black";
+    -fx-font-weight: bold;
+
+}
+
+.tiles{
+    -fx-background-color: #1075ee;
+}
+
+
+
+/*
+
+.menu{
+    -fx-background-color: #fffefe;
+    -fx-background-radius: 2px;
+    -fx-border-radius: 2px;
+}
+
+.menu-form{
+    -fx-background-color: #f0f1f8;
+    -fx-padding: 0;
+}
+
+.menu-form > *{
+    -fx-background-radius: inherit;
+    -fx-border-radius: inherit;
+}
+
+.menu-bar-top-items-sub,
+.menu-vbox-items{
+    -fx-font-family: "Poppins-Extrabold";
+    -fx-font-weight: bold;
+}
+
+.menu-vbox-items{
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-padding: 15 0;
+    -fx-background-color: transparent;
+    -fx-font-size: 11;
+}
+
+.menu-bar-top-items-sub{
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-background-color: transparent;
+    -fx-font-size: 11;
+}
+
+.menu-bar-top-items-sub:hover,
+.menu-bar-top-items-sub:focused{
+    -fx-text-fill: #1075ee;
+}
+
+.menu-vbox-selected,
+.menu-vbox-items:hover,
+.menu-vbox-items:focused{
+    -fx-background-color: #f2f9ff;
+    -fx-text-fill: #1075ee;
+    -fx-border-width: 0 0 0 2px;
+    -fx-border-color: #1075ee;
+}
+ */

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="274.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.WebQRController">
+   <children>
+      <Button fx:id="btnGenerate" layoutX="318.0" layoutY="234.0" mnemonicParsing="false" onMouseClicked="#btnGenerateOnClicked" text="Generate" />
+      <ChoiceBox fx:id="choiceBox" layoutX="14.0" layoutY="34.0" prefHeight="25.0" prefWidth="200.0" />
+      <Label layoutX="14.0" layoutY="14.0" text="Camera" />
+      <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="txtBoxScanned" disable="true" layoutX="14.0" layoutY="234.0" prefHeight="25.0" prefWidth="200.0" />
+      <ImageView fx:id="imgQRView" fitHeight="150.0" fitWidth="156.0" layoutX="227.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="status" layoutX="227.0" layoutY="38.0" text="Not Found" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,70 @@
+/*
+    Yellow warning palette: #FFEF4A
+    Purple bg palette:      #FAFAFA
+    Purple hover palette:   #1C1C1C
+    Purple default palette: #919191
+*/
+
+#form{
+    -fx-background-color: #fff;
+}
+
+#btnLogin{
+    -fx-border-color: #1C1C1C;
+    -fx-border-width: 1.5px;
+    -fx-background-radius: 2px;
+    -fx-background-color: #fff;
+    -fx-text-fill: #1C1C1C;
+}
+
+#txtUsername,
+#txtPassword,
+#ddAccountTypes{
+    -fx-background-color: #FAFAFA;
+    -fx-border-radius: 2px;
+    -fx-border-width: 1.5px;
+    -fx-border-style: solid;
+    -fx-background-radius: 2px;
+    -fx-padding: 10px 10px;
+    -fx-border-color: #919191;
+    -fx-text-fill: #111;
+}
+
+#ddAccountTypes{
+    -fx-padding: 1px 1px;
+}
+
+#txtUsername:focused,
+#txtPassword:focused,
+#ddAccountTypes:focused,
+#txtUsername:hover,
+#txtPassword:hover,
+#ddAccountTypes:hover{
+    -fx-border-color: #1C1C1C;
+    -fx-border-width: 2px;
+
+}
+
+#btnLogin:hover, #btnLogin:focused, #btnLogin:pressed{
+    -fx-background-color: #1C1C1C;
+    -fx-text-fill: #FFF;
+}
+
+
+#pTitleDiv{
+    -fx-background-color: #1C1C1C;
+}
+
+#lblTitle{
+    -fx-font-family: 'Alfa Slab One';
+    -fx-font-size: 30;
+    -fx-text-fill: #fff;
+}
+
+#lblLogin, #lblAccountType{
+    -fx-text-fill: #1C1C1C;
+}
+
+
+
+

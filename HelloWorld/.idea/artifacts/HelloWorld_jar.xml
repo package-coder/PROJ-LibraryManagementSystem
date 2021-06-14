@@ -1,0 +1,26 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="HelloWorld:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/HelloWorld_jar</output-path>
+    <root id="archive" name="HelloWorld.jar">
+      <element id="module-output" name="HelloWorld" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src.zip" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/javafx-swt.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/javafx.web.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/javafx.base.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/javafx.fxml.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/javafx.media.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/javafx.swing.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/javafx.controls.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/javafx.graphics.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/webcam-capture-0.3.12-dist/libs/bridj-0.7.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/webcam-capture-0.3.12-dist/libs/slf4j-api-1.7.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/webcam-capture-0.3.12-dist/webcam-capture-0.3.12.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/zxing-1.7-javase/zxing-1.7-javase.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/zxing-core-2.0/zxing-core-2.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/sqlite/sqlite-jdbc-3.31.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/jfoenix-9.0.10.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/scenebuilder-8.5.0-all.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/scenebuilder-kit-16.0.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

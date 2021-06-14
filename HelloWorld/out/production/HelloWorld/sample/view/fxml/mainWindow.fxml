@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="1030.0" styleClass="parent" stylesheets="@../css/mainStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" prefHeight="100.0" prefWidth="200.0" styleClass="navigation-border" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox HBox.hgrow="NEVER">
+               <children>
+                  <HBox alignment="CENTER_LEFT" minWidth="-Infinity" styleClass="navigation-bar-left-tile" VBox.vgrow="NEVER">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" styleClass="navigation-bar-left-tile-image" />
+                        <VBox alignment="CENTER_LEFT" fillWidth="false" HBox.hgrow="NEVER">
+                           <children>
+                              <Label styleClass="navigation-bar-left-tile-title" text="Welcome" VBox.vgrow="NEVER" />
+                              <Label styleClass="navigation-bar-left-tile-user" text="Name" VBox.vgrow="NEVER" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <ListView fx:id="menuItems" styleClass="navigation-bar-left-list" VBox.vgrow="ALWAYS" />
+               </children>
+               <styleClass>
+                  <String fx:value="navigation-bar" />
+                  <String fx:value="navigation-bar-left" />
+               </styleClass>
+            </VBox>
+            <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+               <children>
+                  <AnchorPane minHeight="-Infinity" VBox.vgrow="NEVER">
+                     <children>
+                        <HBox alignment="CENTER" layoutX="14.0" styleClass="navigation-bar-top-hbox" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" text="Library Management System">
+                                       <styleClass>
+                                          <String fx:value="navigation-bar-top-title" />
+                                          <String fx:value="navigation-bar-top-items" />
+                                       </styleClass>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_RIGHT" styleClass="menu-bar-top-items" HBox.hgrow="ALWAYS">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Notification">
+                                       <styleClass>
+                                          <String fx:value="navigation-bar-top-menu" />
+                                          <String fx:value="navigation-bar-top-items" />
+                                       </styleClass>
+                                    </Button>
+                                    <Button mnemonicParsing="false" text="Messages">
+                                       <styleClass>
+                                          <String fx:value="navigation-bar-top-menu" />
+                                          <String fx:value="navigation-bar-top-items" />
+                                       </styleClass>
+                                    </Button>
+                                    <Button mnemonicParsing="false" text="Profile">
+                                       <styleClass>
+                                          <String fx:value="navigation-bar-top-menu" />
+                                          <String fx:value="navigation-bar-top-items" />
+                                       </styleClass>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <styleClass>
+                        <String fx:value="navigation-bar" />
+                        <String fx:value="navigation-bar-top" />
+                     </styleClass>
+                  </AnchorPane>
+                  <AnchorPane fx:id="menuForm" styleClass="navigation-bar-center" VBox.vgrow="ALWAYS" />
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
