@@ -18,6 +18,12 @@
     -fx-background-color: -fx-color-white;
 }
 
+.plate-title{
+    -fx-font-family: "Rubik Light";
+    -fx-font-size: 1.3em;
+    -fx-text-fill: -fx-color-dark-blue;
+}
+
 .plate-border,
 .plate-center-border,
 .plate-center-left-border,
