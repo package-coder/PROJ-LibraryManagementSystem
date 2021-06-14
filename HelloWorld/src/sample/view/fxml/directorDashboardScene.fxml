@@ -20,7 +20,7 @@
    <children>
       <VBox alignment="CENTER_LEFT" layoutX="60.0" layoutY="36.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label text="Dashboard" VBox.vgrow="NEVER" />
+            <Label styleClass="plate-title" text="Dashboard" VBox.vgrow="NEVER" />
             <VBox alignment="CENTER_LEFT" styleClass="plate-border" VBox.vgrow="ALWAYS">
                <children>
                   <HBox alignment="CENTER_LEFT" VBox.vgrow="NEVER">
@@ -81,7 +81,7 @@
                               </VBox>
                               <VBox VBox.vgrow="NEVER">
                                  <children>
-                                    <Label text="Daily Report" />
+                                    <Label styleClass="plate-title" text="Daily Report" />
                                     <HBox styleClass="plate-center-left-bottom-border">
                                        <children>
                                           <VBox styleClass="plate" HBox.hgrow="SOMETIMES">
