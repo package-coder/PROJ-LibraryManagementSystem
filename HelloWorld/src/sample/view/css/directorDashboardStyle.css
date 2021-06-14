@@ -9,33 +9,34 @@
 .plate{
     -fx-border-insets: 0;
     -fx-background-insets: 0;
-    -fx-padding: 1.2em;
-
     -fx-border-radius: 5px;
-    -fx-border-width: 1px;
-    -fx-border-color: -fx-color-lightblue;
     -fx-background-radius: 5px;
+    -fx-border-width: .05em;
+    -fx-border-color: -fx-color-lightblue1;
     -fx-background-color: -fx-color-white;
+    -fx-padding: 0 0 2px 0;
 }
 
-.plate-title{
+.plate-border-title{
     -fx-font-family: "Rubik Light";
     -fx-font-size: 1.3em;
     -fx-text-fill: -fx-color-dark-blue;
+    -fx-padding: 0 0 1em 0;
 }
 
-.plate-border,
-.plate-center-border,
-.plate-center-left-border,
-.plate-center-left-bottom-border{
+.plate-title{
+    -fx-font-family: "Rubik";
+    -fx-font-size: .8em;
+    -fx-text-fill: -fx-color-lightblue1;
+    -fx-padding: 1em;
+
+}
+
+.plate-border{
     -fx-spacing: 1em;
 }
 
-.plate-top{
-    -fx-padding: 0;
-}
-
-.plate-top-right{
+.plate-clock{
     -fx-border-radius: 0;
     -fx-border-width: 0;
     -fx-background-color: -fx-color-blue;
@@ -43,55 +44,25 @@
     -fx-padding: 0 2em;
 }
 
-.plate-top-right-text{
+.plate-clock-text{
     -fx-font-family: "Consolas";
     -fx-font-size: 1em;
     -fx-text-fill: -fx-color-white;
 }
 
-.plate-top-right-text-time{
+.plate-clock-text-time{
     -fx-font-size: 1.2em;
 }
 
-.plate-top-left{
-    -fx-spacing: 1em;
-    -fx-padding: 1em 1.5em;
+.plate-quick-access{
+    -fx-border-radius: 5px 0 0 5px;
+    -fx-background-radius: 5px 0 0 5px;
 }
 
-.plate-top-left-title{
-    -fx-font-family: "Rubik";
-    -fx-font-size: .8em;
-    -fx-text-fill: -fx-color-lightblue1;
-}
-
-.plate-top-left-box{
+.plate-quick-access-box{
     -fx-background-color: -fx-color-lightblue2;
     -fx-padding: .8em;
 }
-
-.plate-center-left-pos0{
-    -fx-spacing: 1em;
-}
-
-
-
-
-.grid-plates-pane{
-    -fx-background-radius: 3px;
-    -fx-border-radius: 3px;
-    -fx-background-color: #fffefe;
-}
-
-.grid-plates-title{
-    -fx-font-family: "Poppins-Black";
-    -fx-font-weight: bold;
-
-}
-
-.tiles{
-    -fx-background-color: #1075ee;
-}
-
 
 
 /*
