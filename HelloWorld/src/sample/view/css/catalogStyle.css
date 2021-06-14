@@ -1,9 +1,105 @@
+@import url("style.css");
+
+
+
+.plate{
+    -fx-padding:  2px;
+}
+
+.plate-side-bar{
+    -fx-padding: 1em;
+}
+
+.button,
+.button-add .label{
+    -fx-padding: .4em 1.4em;
+    -fx-border-width: 0;
+}
+
+.button-show{
+    -fx-background-color: -fx-color-lightblue;
+    -fx-text-fill: -fx-color-blue;
+}
+
+.button-show:hover,
+.button-show:focused{
+    -fx-background-color: -fx-color-blue;
+    -fx-text-fill: -fx-color-white;
+}
+
+.button-delete{
+    -fx-background-color: -fx-color-lightred;
+    -fx-text-fill: -fx-color-red;
+}
+
+.button-delete:hover,
+.button-delete:focused{
+    -fx-background-color: -fx-color-red;
+    -fx-text-fill: -fx-color-white;
+}
+
+.button-edit{
+    -fx-background-color: -fx-color-lightgreen;
+    -fx-text-fill: -fx-color-green;
+}
+
+.button-edit:hover,
+.button-edit:focused{
+    -fx-background-color: -fx-color-green;
+    -fx-text-fill: -fx-color-white;
+}
+
+.button-add{
+    -fx-background-color: -fx-color-dark-blue;
+    -fx-text-fill: -fx-color-white;
+}
+
+.button-add .arrow-button:pressed{
+-fx-text-fill: red;
+}
+
+.button-add .label,
+.button-add .arrow-button{
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+    -fx-background-color: -fx-background-base-color;
+}
+
+.button-add .label{
+    -fx-border-width: 0 .5px 0 0;
+    -fx-background-radius: 3px 0 0 3px;
+    -fx-text-fill: -fx-color-white;
+}
+
+.button-add .arrow-button{
+    -fx-border-width: 0;
+    -fx-background-radius: 0 3px 3px 0;
+}
+
+.button-add > .arrow-button > .arrow{
+    -fx-background-color: -fx-color-white;
+}
+
+.button-add .arrow-button:hover,
+.button-add .arrow-button:pressed,
+.button-add .label:hover,
+.button-add .label:pressed{
+    -fx-background-color: derive(-fx-color-dark-blue, 10%);
+}
+
+
+
+
+
+
 
 .catalog{
     -fx-background-color: #f0f1f8;
     -fx-background-radius: 2px;
     -fx-border-radius: 2px;
 }
+
+
 
 .catalog-header{
     -fx-background-color: transparent;

@@ -1,11 +1,6 @@
 @import url("style.css");
 
 
-.parent{
-    -fx-background-color: -fx-color-lightblue2;
-    -fx-padding: 3em 5em;
-}
-
 .plate-clock{
     -fx-border-radius: 0;
     -fx-border-width: 0;

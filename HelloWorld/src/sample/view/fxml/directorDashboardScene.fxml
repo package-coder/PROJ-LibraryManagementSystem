@@ -63,7 +63,7 @@
                               <VBox alignment="CENTER_LEFT" styleClass="plate" VBox.vgrow="ALWAYS">
                                  <children>
                                     <Label styleClass="plate-title" text="ANNOUNCEMENT/MESSAGES" />
-                                    <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" styleClass="plate-center-left-box" VBox.vgrow="ALWAYS">
+                                    <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" styleClass="plate-scroll-pane" VBox.vgrow="ALWAYS">
                                        <content>
                                           <VBox alignment="TOP_CENTER" prefHeight="150.0" />
                                        </content>
@@ -111,7 +111,7 @@
                         <VBox alignment="CENTER_LEFT" styleClass="plate" HBox.hgrow="ALWAYS">
                            <children>
                               <Label styleClass="plate-title" text="NOTIFICATIONS" />
-                              <ScrollPane fitToWidth="true" hbarPolicy="NEVER" VBox.vgrow="ALWAYS">
+                              <ScrollPane fitToWidth="true" hbarPolicy="NEVER" styleClass="plate-scroll-pane" VBox.vgrow="ALWAYS">
                                  <content>
                                     <VBox />
                                  </content>

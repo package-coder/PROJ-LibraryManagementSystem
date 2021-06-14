@@ -4,12 +4,23 @@
     -fx-color-lightblue2: #f4f6fc;
     -fx-color-lightblue1: #bfc5d2;
     -fx-color-lightblue0: #b0bac9;
-    -fx-color-lightblue: #f2f9ff;
-
-    -fx-color-blue: #2e5bff;
+    -fx-color-lightblue: rgba(46, 91, 255, 0.1);
+    -fx-color-blue: rgba(46, 91, 255, 1);
     -fx-color-dark-blue: #2e384d;
+
+    -fx-color-lightgreen: rgba(51, 172, 46, 0.1);
+    -fx-color-green: rgba(51, 172, 46, 1);
+
+    -fx-color-lightred: rgba(232, 74, 80, 0.1);
+    -fx-color-red: rgba(232, 74, 80, 1);
+
     -fx-color-white: #fff;
 
+}
+
+.parent{
+    -fx-background-color: -fx-color-lightblue2;
+    -fx-padding: 3em 5em;
 }
 
 .plate{
@@ -40,6 +51,22 @@
 
 .plate-border{
     -fx-spacing: 1em;
+}
+
+.button,
+.split-menu-button > .label{
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+
+
+    -fx-font-family: "Rubik";
+    -fx-font-size: 1em;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+    -fx-border-width: .03em;
+    -fx-border-color: -fx-color-lightblue1;
+    -fx-background-color: -fx-color-lightblue2;
+    -fx-text-fill: -fx-color-lightblue1;
 }
 
 

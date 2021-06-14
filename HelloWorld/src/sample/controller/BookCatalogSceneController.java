@@ -46,7 +46,6 @@ public class BookCatalogSceneController extends SceneController implements Initi
 
         var thread = new SyncData();
         thread.setDaemon(true);
-        thread.start();
 
         btnClearSearch.setText("");
         btnClearSearch.setDisable(txtBoxSearch.getText().isEmpty());
@@ -67,6 +66,7 @@ public class BookCatalogSceneController extends SceneController implements Initi
 
         initializeTable();
 
+        thread.start();
     }
 
 
