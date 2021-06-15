@@ -47,9 +47,6 @@ public class BookCatalogSceneController extends SceneController implements Initi
         var thread = new SyncData();
         thread.setDaemon(true);
 
-        btnClearSearch.setText("");
-        btnClearSearch.setDisable(txtBoxSearch.getText().isEmpty());
-
         txtBoxSearch.textProperty().addListener((args, oldV, newV) -> {
             btnClearSearch.setDisable(newV.isEmpty());
 

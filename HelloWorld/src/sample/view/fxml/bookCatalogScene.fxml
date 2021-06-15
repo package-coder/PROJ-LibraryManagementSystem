@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.String?>
+<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
@@ -17,7 +18,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="507.0" prefWidth="758.0" styleClass="parent" stylesheets="@../css/catalogStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="507.0" prefWidth="758.0" styleClass="parent" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -38,58 +39,53 @@
                <children>
                   <VBox alignment="CENTER" styleClass="plate-border" HBox.hgrow="ALWAYS">
                      <children>
-                        <VBox alignment="CENTER" styleClass="plate" VBox.vgrow="NEVER">
+                        <VBox alignment="CENTER" VBox.vgrow="NEVER">
                            <VBox.margin>
                               <Insets />
                            </VBox.margin>
                            <children>
-                              <HBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                              <HBox alignment="CENTER_RIGHT" VBox.vgrow="NEVER">
                                  <children>
-                                    <Button mnemonicParsing="false" styleClass="button-show" text="Show" />
-                                    <Button mnemonicParsing="false" styleClass="catalog-header-tiles" text="S" />
-                                    <TextField fx:id="txtBoxSearch" prefHeight="28.0" prefWidth="218.0" promptText="Search" styleClass="catalog-header-field">
-                                       <padding>
-                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                       </padding>
-                                       <opaqueInsets>
-                                          <Insets />
-                                       </opaqueInsets>
-                                    </TextField>
-                                    <Button fx:id="btnClearSearch" mnemonicParsing="false" styleClass="catalog-header-tiles" text="C" />
-                                    <MenuButton fx:id="menuBtnSearchFilter" mnemonicParsing="false" styleClass="plate" text="Filters">
-                                       <items>
-                                          <RadioMenuItem mnemonicParsing="false" text="ISBN" />
-                                          <RadioMenuItem mnemonicParsing="false" text="Title" />
-                                          <RadioMenuItem mnemonicParsing="false" text="Subject" />
-                                          <RadioMenuItem mnemonicParsing="false" text="Author" />
-                                          <RadioMenuItem mnemonicParsing="false" text="Publisher" />
-                                          <RadioMenuItem mnemonicParsing="false" text="Copies" />
-                                          <RadioMenuItem mnemonicParsing="false" text="Date Published" />
-                                       </items>
-                                       <HBox.margin>
-                                          <Insets />
-                                       </HBox.margin>
-                                    </MenuButton>
-                                    <MenuButton fx:id="menuBtnSearchFilter1" mnemonicParsing="false" styleClass="plate" text="Sort By">
-                                       <items>
-                                          <RadioMenuItem mnemonicParsing="false" text="ISBN" />
-                                          <RadioMenuItem mnemonicParsing="false" text="Title" />
-                                          <RadioMenuItem mnemonicParsing="false" text="Subject" />
-                                          <RadioMenuItem mnemonicParsing="false" text="Author" />
-                                          <RadioMenuItem mnemonicParsing="false" text="Publisher" />
-                                          <RadioMenuItem mnemonicParsing="false" text="Copies" />
-                                          <RadioMenuItem mnemonicParsing="false" text="Date Published" />
-                                       </items>
-                                    </MenuButton>
+                                    <HBox alignment="CENTER" HBox.hgrow="NEVER">
+                                       <children>
+                                          <TextField fx:id="txtBoxSearch" prefHeight="28.0" prefWidth="218.0" promptText="Search">
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                          </TextField>
+                                          <Button mnemonicParsing="false" text="Button" />
+                                          <Button fx:id="btnClearSearch" mnemonicParsing="false" styleClass="button-reset" text="Reset" />
+                                          <MenuButton fx:id="menuBtnSearchFilter" mnemonicParsing="false" styleClass="menu-button-search-tool" text="Filters">
+                                             <items>
+                                                <RadioMenuItem mnemonicParsing="false" text="ISBN" />
+                                                <RadioMenuItem mnemonicParsing="false" text="Title" />
+                                                <RadioMenuItem mnemonicParsing="false" text="Subject" />
+                                                <RadioMenuItem mnemonicParsing="false" text="Author" />
+                                                <RadioMenuItem mnemonicParsing="false" text="Publisher" />
+                                                <RadioMenuItem mnemonicParsing="false" text="Copies" />
+                                                <RadioMenuItem mnemonicParsing="false" text="Date Published" />
+                                             </items>
+                                          </MenuButton>
+                                          <MenuButton fx:id="menuBtnSearchFilter1" mnemonicParsing="false" styleClass="menu-button-search-tool" text="Sort">
+                                             <items>
+                                                <RadioMenuItem mnemonicParsing="false" text="Ascending" />
+                                                <RadioMenuItem mnemonicParsing="false" text="Descending" />
+                                             </items>
+                                          </MenuButton>
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="plate" />
+                                          <String fx:value="plate-top-bar" />
+                                       </styleClass>
+                                    </HBox>
                                  </children>
-                                 <styleClass>
-                                    <String fx:value="plate-side-bar" />
-                                    <String fx:value="plate-title" />
-                                 </styleClass>
                               </HBox>
                            </children>
                         </VBox>
-                        <VBox alignment="CENTER">
+                        <VBox alignment="CENTER" styleClass="plate">
                            <children>
                               <HBox alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
                                  <children>
@@ -110,43 +106,56 @@
                                  </children>
                               </HBox>
                            </children>
-                           <styleClass>
-                              <String fx:value="plate" />
-                              <String fx:value="plate-border" />
-                           </styleClass>
                         </VBox>
                         <VBox VBox.vgrow="NEVER">
                            <children>
-                              <HBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="plate-side-bar-bottom" VBox.vgrow="NEVER">
+                              <HBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="NEVER">
                                  <children>
                                     <VBox alignment="CENTER_LEFT">
                                        <children>
-                                          <Label text="Access As:">
-                                             <styleClass>
-                                                <String fx:value="plate-title" />
-                                                <String fx:value="label-access-as" />
-                                             </styleClass>
-                                          </Label>
-                                          <HBox alignment="CENTER">
+                                          <HBox>
                                              <children>
-                                                <ChoiceBox prefWidth="150.0" styleClass="choice-box-access">
+                                                <Label text="Access Mode:">
+                                                   <styleClass>
+                                                      <String fx:value="plate-title" />
+                                                      <String fx:value="label-access-moode" />
+                                                   </styleClass>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" styleClass="plate-border">
+                                             <children>
+                                                <ChoiceBox prefHeight="28.0" prefWidth="131.0" styleClass="choice-box-access">
                                                    <HBox.margin>
                                                       <Insets right="10.0" />
                                                    </HBox.margin>
                                                 </ChoiceBox>
                                                 <Button mnemonicParsing="false" styleClass="button-delete" text="Delete" />
                                                 <Button mnemonicParsing="false" styleClass="button-edit" text="Edit" />
-                                                <SplitMenuButton alignment="CENTER_RIGHT" mnemonicParsing="false" popupSide="TOP" styleClass="button-add" text="Add Item">
+                                                <SplitMenuButton alignment="CENTER_RIGHT" mnemonicParsing="false" styleClass="button-add" text="Add Item">
                                                   <items>
                                                     <MenuItem mnemonicParsing="false" text="Add Multiple Item" />
                                                     <MenuItem mnemonicParsing="false" text="Import From File" />
                                                   </items>
                                                 </SplitMenuButton>
                                              </children>
-                                             <styleClass>
-                                                <String fx:value="plate-border" />
-                                                <String fx:value="plate-access-group-item" />
-                                             </styleClass>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT">
+                                             <children>
+                                                <Label text="Read Only Mode">
+                                                   <styleClass>
+                                                      <String fx:value="plate-title" />
+                                                      <String fx:value="label-mode-info" />
+                                                      <String fx:value="label-mode-info-highlighted" />
+                                                   </styleClass>
+                                                </Label>
+                                                <Label text=" Read Only Mode">
+                                                   <styleClass>
+                                                      <String fx:value="plate-title" />
+                                                      <String fx:value="label-mode-info" />
+                                                   </styleClass>
+                                                </Label>
+                                             </children>
                                           </HBox>
                                        </children>
                                        <styleClass>
@@ -168,4 +177,8 @@
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
+   <stylesheets>
+      <URL value="@../css/style.css" />
+      <URL value="@../css/catalogStyle.css" />
+   </stylesheets>
 </AnchorPane>

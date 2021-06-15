@@ -1,86 +1,16 @@
 @import url("style.css");
 
+.plate-top-bar{
+    -fx-padding: 1em;
+    -fx-spacing: .3em;
 
-.plate-side-bar{
-    -fx-padding: 0em;
-}
-
-.plate-side-bar-bottom:disabled{
-    -fx-background-color: -fx-color-lightblue2;
-    -fx-opacity: 80%;
 }
 
 .plate-access-group{
     -fx-padding: 1em;
+    -fx-border-width: .1em;
     -fx-background-color: derived(-fx-color-lightblue, 80%);
 }
-
-.plate-access-group-items{
-    -fx-spacing: 1em;
-}
-
-.label-access-as{
-    -fx-padding:  0 0 .5em 0;
-    -font-size: 1em;
-    -fx-font-family: "Rubik Medium";
-    -fx-text-fill: -fx-color-dark-blue;
-}
-
-.choice-box-access{
-    -fx-border-radius: 3px;
-    -fx-background-radius: 3px;
-    -fx-border-width: .03em;
-    -fx-border-color: -fx-color-lightblue1;
-}
-
-.choice-box-access .label{
-    -fx-background-color: -fx-color-white;
-    -fx-text-fill: -fx-color-dark-blue;
-    -fx-font-weight: bold;
-}
-
-
-.choice-box-access .context-menu{
-    -fx-background-color: -fx-color-white;
-}
-
-.choice-box-access .menu-item .label{
-    -fx-text-fill: -fx-color-dark-blue;
-    -fx-font-weight: normal;
-    -fx-background-color: inherit;
-}
-
-
-.choice-box-access .menu-item:hover .label,
-.choice-box-access .menu-item:focused .label{
-    -fx-text-fill: -fx-color-white;
-}
-
-.choice-box-access .menu-item:hover,
-.choice-box-access .menu-item:focused{
-    -fx-background-color: -fx-color-dark-blue;
-}
-
-
-
-.button-add .context-menu{
-    -fx-background-color: -fx-color-dark-blue;
-}
-
-.button-add .menu-item .label,
-.button-add .menu-item:selected .label{
-    -fx-text-fill: -fx-color-white;
-    -fx-background-color: inherit;
-}
-
-.button-add .menu-item:hover,
-.button-add .menu-item:focused{
-    -fx-background-color: derived(-fx-color-dark-blue, 95%);
-}
-
-
-
-
 
 .plate-access-group:viewonly{
 
@@ -96,11 +26,25 @@
 
 
 
+
 .button,
+.menu-button-search-tool .label,
 .button-add .label,
 .choice-box-access .label{
     -fx-padding: .4em 1.4em;
     -fx-border-width: 0;
+}
+
+.button-reset{
+    -fx-background-color: -fx-color-lightred;
+    -fx-border-width: .05em;
+    -fx-border-color: transparent;
+}
+
+.button-reset:hover,
+.button-reset:focused{
+    -fx-text-fill: -fx-color-red;
+    -fx-border-color: -fx-color-red;
 }
 
 .button-show{
@@ -139,13 +83,14 @@
 .button-add{
     -fx-background-color: -fx-color-dark-blue;
     -fx-text-fill: -fx-color-white;
+    -fx-mark-color: -fx-text-fill;
 }
 
 .button-add .label,
 .button-add .arrow-button{
     -fx-background-insets: 0;
     -fx-border-insets: 0;
-    -fx-background-color: -fx-background-base-color;
+    -fx-background-color: -fx-color-dark-blue;
 }
 
 .button-add .label{
@@ -159,134 +104,64 @@
     -fx-background-radius: 0 3px 3px 0;
 }
 
-.button-add > .arrow-button > .arrow{
-    -fx-background-color: -fx-color-white;
-}
-
 .button-add .arrow-button:hover,
 .button-add .arrow-button:focused,
 .button-add .label:hover,
 .button-add .label:focused{
-    -fx-background-color: derive(-fx-color-dark-blue, 10%);
+    -fx-background-color: derive(-fx-color-dark-blue, 20%);
 }
 
-
-
-
-
-.catalog{
-    -fx-background-color: #f0f1f8;
-    -fx-background-radius: 2px;
-    -fx-border-radius: 2px;
+.button-add .arrow-button:hover .arrow,
+.button-add .arrow-button:focused .arrow{
+    -fx-background-color: derived(-fx-color-blue, 50%);
 }
 
-
-
-.catalog-header{
-    -fx-background-color: transparent;
+.button-add .label:hover,
+.button-add .label:focused{
 }
 
-.catalog-header-title{
-    -fx-font-family: "Poppins-Black";
-    -fx-font-weight: bold;
-    -fx-font-size: 15px;
+.button-add .label:hover,
+.button-add .label:focused{
+    -fx-text-fill: derived(-fx-color-blue, 50%);
 }
 
-.catalog-header-field, .catalog-header-menu{
-    -fx-border-color: lightgray;
-    -fx-background-color: transparent;
-    -fx-border-width: .5;
-    -fx-border-radius: 30%;
-    -fx-padding: 5 5 5 10;
-}
-.catalog-header-menu{
-    -fx-padding: 0;
-    -fx-text-fill: lightgray;
+.button-add .context-menu{
+    -fx-background-color: -fx-color-dark-blue;
 }
 
-.catalog-header-field:hover,
-.catalog-header-field:focused,
-.catalog-header-menu:hover,
-.catalog-header-menu:focused{
-    -fx-border-color: #1075ee;
+.button-add .menu-item .label,
+.button-add .menu-item:selected .label{
+    -fx-text-fill: -fx-color-white;
+    -fx-background-color: inherit;
 }
 
-.catalog-header-title:hover{
-    -fx-text-fill: #1075ee;
+.button-add .menu-item:hover,
+.button-add .menu-item:focused{
+    -fx-background-color: derived(-fx-color-dark-blue, 20%);
 }
 
-.catalog-header-tiles{
-    -fx-background-insets: 0;
-    -fx-border-insets: 0;
-    -fx-background-color: #f2f9ff;
-    -fx-background-radius: 5px;
+.button-add .menu-item:hover .label,
+.button-add .menu-item:focused .label{
+    -fx-background-color: inherit;
+    -fx-text-fill: derived(-fx-color-blue, 50%);
 }
 
-.grid{
-    -fx-border-radius: 5px;
-    -fx-background-radius: 5px;
-    -fx-background-color: #fffefe;
-}
-
-.grid-center{
-    -fx-border-width: .5 0;
-    -fx-border-color: lightgray;
-}
-
-
-.table-view{
-    -fx-border-insets: 0;
-    -fx-background-color: transparent;
-}
-
-.table-view .corner,
-.table-view .column-header-background .filler{
-    -fx-background-color: #fffefe;
-
-}
-
-
-.table-view .column-header{
-    -fx-background-color: -fx-color-white;
-    -fx-border-width: 0 0 .03em 0;
-    -fx-border-color: -fx-color-lightblue1;
-}
-
-.table-view .column-header .label{
-    -fx-font-family: "Rubik";
-    -fx-font-size: .8em;
-    -fx-text-fill: -fx-color-lightblue1;
-    -fx-padding: 1em 0;
-}
-
-.table-view .table-cell {
-    -fx-padding: 1em;
-    -fx-border-width: 0 0 .03em 0;
-}
-
-
-.table-view .table-cell .label{
-    -fx-font-family: "Rubik";
+.label-access-moode{
+    -fx-font-family: "Rubik Medium";
     -fx-font-size: 1em;
+    -fx-text-fill: derived(-fx-color-dark-blue, 50%);
+    -fx-padding:  0 0 .5em 0;
+}
+
+.label-mode-info{
+    -fx-text-fill: -fx-color-lightblue0;
+    -fx-padding: .5em 0 0 .3em;
+}
+
+.label-mode-info-highlighted{
+    -fx-font-family: "Rubik Medium";
+}
+
+.label-mode-info:disabled{
     -fx-text-fill: -fx-color-dark-blue;
-}
-
-.table-row-cell:even,
-.table-row-cell:odd{
-    -fx-border-width: 0 0 .02em 0;
-    -fx-border-color: -fx-color-lightblue1;
-    -fx-background-color: transparent;
-}
-
-.table-row-cell:hover,
-.table-row-cell:selected{
-    -fx-text-background-color: #1075ee;
-    -fx-background-color: #f2f9ff;
-}
-
-.table-view .virtual-flow .scroll-bar:vertical,
-.table-view .virtual-flow .scroll-bar:vertical .track,
-.table-view .virtual-flow .scroll-bar:horizontal,
-.table-view .virtual-flow .scroll-bar:horizontal .track{
-    -fx-background-color: transparent;
 }
