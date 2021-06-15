@@ -1,7 +1,7 @@
 @import url("style.css");
 
 .parent{
-    -fx-background-color: -fx-color-lightblue2;
+    -fx-padding: 0;
 }
 
 .navigation-border,

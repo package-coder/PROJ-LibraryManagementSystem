@@ -9,20 +9,19 @@
 .plate-access-group{
     -fx-padding: 1em;
     -fx-border-width: .1em;
+
     -fx-background-color: derived(-fx-color-lightblue, 80%);
 }
 
-.plate-access-group:viewonly{
-
+.plate-access-group:disabled{
+    -fx-opacity: 80%;
 }
 
-.plate-access-group:manage{
-
+.plate-access-group:requestOnChange{
+    -fx-background-color: -fx-color-lightgreen;
+    -fx-border-color: derived(-fx-color-green, 80%);
 }
 
-.plate-access-group:fullaccess{
-
-}
 
 
 
@@ -154,14 +153,7 @@
 }
 
 .label-mode-info{
-    -fx-text-fill: -fx-color-lightblue0;
-    -fx-padding: .5em 0 0 .3em;
-}
-
-.label-mode-info-highlighted{
     -fx-font-family: "Rubik Medium";
-}
-
-.label-mode-info:disabled{
-    -fx-text-fill: -fx-color-dark-blue;
+    -fx-text-fill: derived(-fx-color-dark-blue, 50%);
+    -fx-padding: .5em 0 0 .3em;
 }

@@ -1,41 +1,6 @@
 @import url("style.css");
 
 
-.parent{
-    -fx-background-color: -fx-color-lightblue2;
-    -fx-padding: 3em 5em;
-}
-
-.plate{
-    -fx-border-insets: 0;
-    -fx-background-insets: 0;
-    -fx-border-radius: 5px;
-    -fx-background-radius: 5px;
-    -fx-border-width: .05em;
-    -fx-border-color: -fx-color-lightblue1;
-    -fx-background-color: -fx-color-white;
-    -fx-padding: 0 0 2px 0;
-}
-
-.plate-border-title{
-    -fx-font-family: "Rubik Light";
-    -fx-font-size: 1.5em;
-    -fx-text-fill: -fx-color-dark-blue;
-    -fx-padding: 0 0 1em 0;
-}
-
-.plate-title{
-    -fx-font-family: "Rubik";
-    -fx-font-size: .8em;
-    -fx-text-fill: -fx-color-lightblue1;
-    -fx-padding: 1.5em;
-
-}
-
-.plate-border{
-    -fx-spacing: 1em;
-}
-
 .plate-clock{
     -fx-border-radius: 0;
     -fx-border-width: 0;
@@ -64,6 +29,13 @@
     -fx-padding: .8em;
 }
 
+.plate-scroll-pane{
+
+}
+
+.scroll-pane{
+    -fx-border-insets: 0;
+}
 
 /*
 

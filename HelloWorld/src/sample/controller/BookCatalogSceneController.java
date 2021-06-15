@@ -1,11 +1,19 @@
 package sample.controller;
 
+import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.ReadOnlyBooleanProperty;
+import javafx.beans.property.ReadOnlyBooleanWrapper;
+import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.css.PseudoClass;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.layout.VBox;
+import sample.classes.AccessMode;
 import sample.dbutil.DBController;
 import sample.model.Book;
 
@@ -21,19 +29,31 @@ import java.util.function.Function;
 
 public class BookCatalogSceneController extends SceneController implements Initializable {
 
-    @FXML private Button btnClearSearch;
-    @FXML private MenuButton menuBtnSearchFilter;
-    @FXML private TextField txtBoxSearch;
-    @FXML private TableView<Book> dataTableView;
-    @FXML private TableColumn<Book, Number> tableISBNColumn;
-    @FXML private TableColumn<Book, String> tableTitleColumn;
-    @FXML private TableColumn<Book, String> tablePublisherColumn;
-    @FXML private TableColumn<Book, Number> tableCopiesColumn;
-    @FXML private TableColumn<Book, String> tableEditionColumn;
-    @FXML private TableColumn<Book, String> tableAuthorColumn;
-    @FXML private TableColumn<Book, LocalDate> tableDatePublishedColumn;
+    @FXML private VBox accessModeGroupBox;
+    @FXML private Label accessModeGroupTitle;
+    @FXML private Label accessModeGroupSubTitle;
+    @FXML private Button deleteButton;
+    @FXML private Button updateButton;
+    @FXML private Button resetButton;
+    @FXML private Button refreshTableDataButton;
+    @FXML private MenuButton searchFilterMenuButton;
+    @FXML private MenuButton sortTableMenuButton;
+    @FXML private SplitMenuButton addItemButton;
+    @FXML private TextField searchTextField;
+    @FXML private ChoiceBox<AccessMode> accessModeChoiceBox;
+    @FXML private CheckBox dataSyncCheckBox;
 
-    private boolean dataIsSynced = true;
+    @FXML private TableView<Book> bookTableView;
+    @FXML private TableColumn<Book, Number> bookSerialTableColumn;
+    @FXML private TableColumn<Book, String> bookTitleTableColumn;
+    @FXML private TableColumn<Book, String> bookPublisherTableColumn;
+    @FXML private TableColumn<Book, Number> bookCopiesTableColumn;
+    @FXML private TableColumn<Book, String> bookEditionTableColumn;
+    @FXML private TableColumn<Book, String> bookAuthorTableColumn;
+    @FXML private TableColumn<Book, LocalDate> bookDatePublishedTableColumn;
+
+
+    private final BooleanProperty dataSyncProperty = new SimpleBooleanProperty();
     private TableView<Book> tempDataTableView = new TableView<>();
 
     public BookCatalogSceneController() {
@@ -44,26 +64,36 @@ public class BookCatalogSceneController extends SceneController implements Initi
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        var thread = new SyncData();
-        thread.setDaemon(true);
+        dataSyncCheckBox.selectedProperty().bindBidirectional(dataSyncProperty);
 
-        txtBoxSearch.textProperty().addListener((args, oldV, newV) -> {
-            btnClearSearch.setDisable(newV.isEmpty());
+        dataSyncProperty.addListener((observable, oldValue, newValue) -> {
+            if(!newValue)
+                return;
+
+            var thread = new SyncData();
+            thread.setDaemon(true);
+            thread.start();
+        });
+
+        dataSyncCheckBox.selectedProperty().setValue(true);
+
+        searchTextField.textProperty().addListener((args, oldV, newV) -> {
+            resetButton.setDisable(newV.isEmpty());
 
             if(newV.isEmpty()){
-                dataTableView.setItems(tempDataTableView.getItems());
+                bookTableView.setItems(tempDataTableView.getItems());
             }
             else {
-                tempDataTableView.setItems(dataTableView.getItems());
+                tempDataTableView.setItems(bookTableView.getItems());
 
                 var list = search(newV, tempDataTableView.getItems());
-                dataTableView.setItems(list);
+                bookTableView.setItems(list);
             }
         });
 
-        initializeTable();
 
-        thread.start();
+        initializeValues();
+        initializeTable();
     }
 
 
@@ -73,15 +103,33 @@ public class BookCatalogSceneController extends SceneController implements Initi
         return null;
     }
 
+    private void initializeValues(){
+
+        accessModeChoiceBox.getItems().addAll(
+                new ReadOnlyAccessMode(),
+                new RequestOnChangeAccessMode(),
+                new FullAccessMode()
+
+        );
+
+        accessModeChoiceBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            newValue.access();
+            accessModeGroupTitle.setText(newValue.toString());
+            accessModeGroupSubTitle.setText(newValue.message());
+        });
+
+        accessModeChoiceBox.getSelectionModel().select(0);
+
+    }
 
     private void initializeTable(){
-        setupCellValueFactory(tableISBNColumn, Book::serialIDProperty);
-        setupCellValueFactory(tableTitleColumn, Book::titleProperty);
-        setupCellValueFactory(tablePublisherColumn, Book::publisherProperty);
-        setupCellValueFactory(tableCopiesColumn, Book::bookCopiesProperty);
-        setupCellValueFactory(tableEditionColumn, Book::editionProperty);
-        setupCellValueFactory(tableAuthorColumn, Book::authorProperty);
-        setupCellValueFactory(tableDatePublishedColumn, Book::datePublishedProperty);
+        setupCellValueFactory(bookSerialTableColumn, Book::serialIDProperty);
+        setupCellValueFactory(bookTitleTableColumn, Book::titleProperty);
+        setupCellValueFactory(bookPublisherTableColumn, Book::publisherProperty);
+        setupCellValueFactory(bookCopiesTableColumn, Book::bookCopiesProperty);
+        setupCellValueFactory(bookEditionTableColumn, Book::editionProperty);
+        setupCellValueFactory(bookAuthorTableColumn, Book::authorProperty);
+        setupCellValueFactory(bookDatePublishedTableColumn, Book::datePublishedProperty);
     }
 
     private <T> void setupCellValueFactory(TableColumn<Book, T> column, Function<Book, ObservableValue<T>> mapper) {
@@ -89,22 +137,82 @@ public class BookCatalogSceneController extends SceneController implements Initi
                 -> mapper.apply(param.getValue()));
     }
 
+    private class ReadOnlyAccessMode implements AccessMode{
+        @Override
+        public void access() {
+            accessModeGroupBox.setDisable(true);
+        }
+
+        @Override
+        public String message() {
+            return null;
+        }
+
+        @Override
+        public String toString() {
+            return "Read Only Access Mode";
+        }
+    }
+
+    private class RequestOnChangeAccessMode implements AccessMode{
+        @Override
+        public void access() {
+            var pseudo = PseudoClass.getPseudoClass("requestOnChange");
+
+            accessModeGroupBox.pseudoClassStateChanged(pseudo, true);
+
+        }
+
+        @Override
+        public String message() {
+            return null;
+        }
+
+        @Override
+        public String toString() {
+            return "Request On Change Access Mode";
+        }
+    }
+
+    private class FullAccessMode implements AccessMode{
+        @Override
+        public void access() {
+
+        }
+
+        @Override
+        public String message() {
+            return null;
+        }
+
+        @Override
+        public String toString() {
+            return "Full Access";
+        }
+    }
+
+
+
     private class SyncData extends Thread{
 
         @Override
         public void run() {
-            while (dataIsSynced){
+            System.out.println("Thread Start");
+            while (dataSyncProperty.getValue()){
                 try {
                     var items = DBController.getBookList();
-                    dataTableView.setItems(FXCollections.observableList(items));
+                    bookTableView.setItems(FXCollections.observableList(items));
 
                     Thread.sleep(100);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }
+            System.out.println("Thread Stop");
         }
 
     }
+
+
 
 }

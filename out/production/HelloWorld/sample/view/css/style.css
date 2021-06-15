@@ -4,19 +4,190 @@
     -fx-color-lightblue2: #f4f6fc;
     -fx-color-lightblue1: #bfc5d2;
     -fx-color-lightblue0: #b0bac9;
-    -fx-color-lightblue: #f2f9ff;
-
-    -fx-color-blue: #2e5bff;
+    -fx-color-lightblue: rgba(46, 91, 255, 0.1);
+    -fx-color-blue: rgba(46, 91, 255, 1);
     -fx-color-dark-blue: #2e384d;
+
+    -fx-color-lightgreen: rgba(51, 172, 46, 0.1);
+    -fx-color-green: rgba(51, 172, 46, 1);
+
+    -fx-color-lightred: rgba(232, 74, 80, 0.1);
+    -fx-color-red: rgba(232, 74, 80, 1);
+
     -fx-color-white: #fff;
 
 }
 
-.card{
-    -fx-background-color: -fx-color-white;
-    -fx-border-radius: 5px;
+.parent{
+    -fx-background-color: -fx-color-lightblue2;
+    -fx-padding: 2em 5em;
+}
+
+.text-field,
+.plate{
     -fx-border-insets: 0;
     -fx-background-insets: 0;
+    -fx-border-radius: .5em;
+    -fx-background-radius: .5em;
+    -fx-border-width: .05em;
+    -fx-border-color: -fx-color-lightblue1;
+    -fx-background-color: -fx-color-white;
+    -fx-padding: 0 0 2px 0;
+}
+
+.plate-border-title{
+    -fx-font-family: "Rubik Light";
+    -fx-font-size: 1.5em;
+    -fx-text-fill: -fx-color-dark-blue;
+    -fx-padding: 0 0 1em 0;
+}
+
+.plate-title{
+    -fx-font-family: "Rubik";
+    -fx-font-size: .8em;
+    -fx-text-fill: -fx-color-lightblue1;
+    -fx-padding: 1.5em;
+
+}
+
+.plate-border{
+    -fx-spacing: 1em;
+}
+
+
+.button,
+.menu-button > .label,
+.split-menu-button > .label,
+.choice-box > .label{
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+
+    -fx-font-family: "Rubik";
+    -fx-font-size: 1.08em;
+    -fx-border-radius: .3em;
+    -fx-background-radius: .3em;
+    -fx-border-width: .03em;
+    -fx-border-color: -fx-color-lightblue1;
+    -fx-background-color: -fx-color-lightblue2;
+    -fx-text-fill: -fx-color-lightblue0;
+}
+
+.choice-box{
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+    -fx-border-radius: .3em;
+    -fx-background-radius: .3em;
+    -fx-border-width: .03em;
+    -fx-border-color: -fx-color-lightblue1;
+    -fx-mark-color: -fx-color-dark-blue;
+}
+
+.choice-box .label{
+    -fx-background-color: -fx-color-white;
+    -fx-text-fill: -fx-color-dark-blue;
+}
+
+
+* .context-menu{
+    -fx-background-color: -fx-color-white;
+}
+
+* .menu-item .label{
+    -fx-text-fill: -fx-color-dark-blue;
+    -fx-font-weight: normal;
+    -fx-background-color: -fx-color-white;
+}
+
+* .menu-item:hover .label,
+* .menu-item:focused .label{
+    -fx-text-fill: -fx-color-white;
+    -fx-background-color: inherit;
+}
+
+
+* .menu-item:hover,
+* .menu-item:focused{
+    -fx-background-color: -fx-color-dark-blue;
+}
+
+
+
+.menu-button{
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+
+    -fx-border-width: .05em;
+    -fx-border-color: transparent;
+    -fx-background-color: -fx-color-white;
+    -fx-mark-color: -fx-color-dark-blue;
+}
+
+.menu-button .arrow-button .arrow{
+    -fx-background-color: -fx-color-lightblue0;
+}
+
+.menu-button .label,
+.menu-button .arrow-button{
+    -fx-background-color: -fx-color-lightblue;
+}
+
+.menu-button .label{
+    -fx-background-radius: .3em 0 0 .3em;
+    -fx-text-fill: -fx-color-lightblue0;
+}
+
+.menu-button .arrow-button{
+    -fx-background-radius: 0 .3em .3em 0;
+}
+
+
+.menu-button:hover,
+.menu-button:pressed{
+    -fx-border-color: -fx-color-blue;
+    -fx-border-radius: .3em;
+}
+
+.menu-button:hover .label,
+.menu-button:pressed .label{
+    -fx-text-fill: -fx-color-blue;
+}
+
+.menu-button:hover .arrow-button .arrow,
+.menu-button:pressed .arrow-button .arrow{
+    -fx-background-color: -fx-color-blue;
+}
+
+.menu-button .menu-item .label{
+    -fx-text-fill: -fx-color-dark-blue;
+    -fx-font-weight: normal;
+    -fx-background-color: -fx-color-white;
+}
+
+.menu-button .menu-item:hover .label,
+.menu-button .menu-item:focused .label{
+    -fx-text-fill: -fx-color-white;
+    -fx-background-color: inherit;
+}
+
+
+.menu-button .menu-item:hover,
+.menu-button .menu-item:focused{
+    -fx-background-color: -fx-color-dark-blue;
+}
+
+
+.text-field{
+    -fx-padding: .5em;
+    -fx-font-family: "Rubik Light";
+    -fx-font-size: 1em;
+    -fx-border-radius: .7em;
+    -fx-background-radius: .7em;
+    -fx-text-fill: -fx-color-dark-blue;
+}
+
+.text-field:hover,
+.text-field:focused{
+    -fx-border-color: -fx-color-blue;
 }
 
 
@@ -41,4 +212,61 @@
     -fx-background-color: lightgray;
     -fx-border-width: 0 0 0 4;
     -fx-text-fill: gray;
+}
+
+
+.table-view{
+    -fx-border-insets: 0;
+    -fx-background-color: transparent;
+}
+
+.table-view .corner,
+.table-view .column-header-background .filler{
+    -fx-background-color: #fffefe;
+}
+
+
+.table-view .column-header{
+    -fx-background-color: -fx-color-white;
+    -fx-border-width: 0 0 .03em 0;
+    -fx-border-color: -fx-color-lightblue1;
+}
+
+.table-view .column-header .label{
+    -fx-font-family: "Rubik";
+    -fx-font-size: .8em;
+    -fx-text-fill: -fx-color-lightblue1;
+    -fx-padding: 1em 0;
+}
+
+.table-view .table-cell {
+    -fx-padding: 1em;
+    -fx-border-width: 0 0 .03em 0;
+}
+
+
+.table-view .table-cell .label{
+    -fx-font-family: "Rubik";
+    -fx-font-size: 1em;
+    -fx-text-fill: -fx-color-dark-blue;
+}
+
+.table-row-cell:even,
+.table-row-cell:odd{
+    -fx-border-width: 0 0 .03em 0;
+    -fx-border-color: -fx-color-lightblue1;
+    -fx-background-color: transparent;
+}
+
+.table-row-cell:hover,
+.table-row-cell:selected{
+    -fx-text-background-color: #1075ee;
+    -fx-background-color: #f2f9ff;
+}
+
+.table-view .virtual-flow .scroll-bar:vertical,
+.table-view .virtual-flow .scroll-bar:vertical .track,
+.table-view .virtual-flow .scroll-bar:horizontal,
+.table-view .virtual-flow .scroll-bar:horizontal .track{
+    -fx-background-color: transparent;
 }
