@@ -53,14 +53,16 @@
     -fx-spacing: 1em;
 }
 
+
 .button,
-.split-menu-button > .label{
+.split-menu-button > .label,
+.choice-box > .label{
     -fx-background-insets: 0;
     -fx-border-insets: 0;
 
 
     -fx-font-family: "Rubik";
-    -fx-font-size: 1em;
+    -fx-font-size: 1.08em;
     -fx-border-radius: 3px;
     -fx-background-radius: 3px;
     -fx-border-width: .03em;
@@ -68,6 +70,8 @@
     -fx-background-color: -fx-color-lightblue2;
     -fx-text-fill: -fx-color-lightblue1;
 }
+
+
 
 
 .list-view{

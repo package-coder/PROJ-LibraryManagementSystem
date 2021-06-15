@@ -19,7 +19,7 @@
 
 <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="507.0" prefWidth="758.0" styleClass="parent" stylesheets="@../css/catalogStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <HBox alignment="CENTER" VBox.vgrow="NEVER">
                <children>
@@ -32,113 +32,136 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
-                     <children>
-                        <Label text="Manage Access: " />
-                        <ChoiceBox prefHeight="25.0" prefWidth="107.0" HBox.hgrow="NEVER" />
-                     </children>
-                  </HBox>
                </children>
             </HBox>
-            <VBox alignment="CENTER" styleClass="plate" VBox.vgrow="ALWAYS">
+            <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
                <children>
-                  <HBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="plate-side-bar" VBox.vgrow="SOMETIMES">
+                  <VBox alignment="CENTER" styleClass="plate-border" HBox.hgrow="ALWAYS">
                      <children>
-                        <Button mnemonicParsing="false" styleClass="catalog-header-tiles" text="S" />
-                        <TextField fx:id="txtBoxSearch" prefHeight="28.0" prefWidth="218.0" promptText="Search" styleClass="catalog-header-field">
-                           <padding>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </padding>
-                           <opaqueInsets>
+                        <VBox alignment="CENTER" styleClass="plate" VBox.vgrow="NEVER">
+                           <VBox.margin>
                               <Insets />
-                           </opaqueInsets>
-                        </TextField>
-                        <Button fx:id="btnClearSearch" mnemonicParsing="false" styleClass="catalog-header-tiles" text="C" />
-                        <MenuButton fx:id="menuBtnSearchFilter" mnemonicParsing="false" text="Filters">
-                           <items>
-                              <RadioMenuItem mnemonicParsing="false" text="ISBN" />
-                              <RadioMenuItem mnemonicParsing="false" text="Title" />
-                              <RadioMenuItem mnemonicParsing="false" text="Subject" />
-                              <RadioMenuItem mnemonicParsing="false" text="Author" />
-                              <RadioMenuItem mnemonicParsing="false" text="Publisher" />
-                              <RadioMenuItem mnemonicParsing="false" text="Copies" />
-                              <RadioMenuItem mnemonicParsing="false" text="Date Published" />
-                           </items>
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
+                           </VBox.margin>
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                                 <children>
+                                    <Button mnemonicParsing="false" styleClass="button-show" text="Show" />
+                                    <Button mnemonicParsing="false" styleClass="catalog-header-tiles" text="S" />
+                                    <TextField fx:id="txtBoxSearch" prefHeight="28.0" prefWidth="218.0" promptText="Search" styleClass="catalog-header-field">
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </TextField>
+                                    <Button fx:id="btnClearSearch" mnemonicParsing="false" styleClass="catalog-header-tiles" text="C" />
+                                    <MenuButton fx:id="menuBtnSearchFilter" mnemonicParsing="false" styleClass="plate" text="Filters">
+                                       <items>
+                                          <RadioMenuItem mnemonicParsing="false" text="ISBN" />
+                                          <RadioMenuItem mnemonicParsing="false" text="Title" />
+                                          <RadioMenuItem mnemonicParsing="false" text="Subject" />
+                                          <RadioMenuItem mnemonicParsing="false" text="Author" />
+                                          <RadioMenuItem mnemonicParsing="false" text="Publisher" />
+                                          <RadioMenuItem mnemonicParsing="false" text="Copies" />
+                                          <RadioMenuItem mnemonicParsing="false" text="Date Published" />
+                                       </items>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </MenuButton>
+                                    <MenuButton fx:id="menuBtnSearchFilter1" mnemonicParsing="false" styleClass="plate" text="Sort By">
+                                       <items>
+                                          <RadioMenuItem mnemonicParsing="false" text="ISBN" />
+                                          <RadioMenuItem mnemonicParsing="false" text="Title" />
+                                          <RadioMenuItem mnemonicParsing="false" text="Subject" />
+                                          <RadioMenuItem mnemonicParsing="false" text="Author" />
+                                          <RadioMenuItem mnemonicParsing="false" text="Publisher" />
+                                          <RadioMenuItem mnemonicParsing="false" text="Copies" />
+                                          <RadioMenuItem mnemonicParsing="false" text="Date Published" />
+                                       </items>
+                                    </MenuButton>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="plate-side-bar" />
+                                    <String fx:value="plate-title" />
+                                 </styleClass>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <TableView fx:id="dataTableView" HBox.hgrow="ALWAYS">
+                                      <columns>
+                                        <TableColumn fx:id="tableISBNColumn" editable="false" maxWidth="4000.0" minWidth="-1.0" sortable="false" styleClass="table-column-alignment" text="ISBN" />
+                                        <TableColumn fx:id="tableTitleColumn" editable="false" minWidth="-1.0" sortable="false" text="Title" />
+                                          <TableColumn fx:id="tableEditionColumn" editable="false" maxWidth="3000.0" minWidth="-1.0" sortType="DESCENDING" sortable="false" styleClass="table-column-alignment" text="Edition" />
+                                          <TableColumn fx:id="tableAuthorColumn" editable="false" minWidth="-1.0" sortable="false" text="Author" />
+                                          <TableColumn fx:id="tablePublisherColumn" editable="false" minWidth="-1.0" sortable="false" text="Publisher" />
+                                          <TableColumn fx:id="tableCopiesColumn" editable="false" maxWidth="2000.0" minWidth="-1.0" sortable="false" styleClass="table-column-alignment" text="Copies" />
+                                          <TableColumn fx:id="tableDatePublishedColumn" editable="false" minWidth="-1.0" sortable="false" styleClass="table-column-alignment" text="Date Published" />
+                                      </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                 </children>
+                              </HBox>
+                           </children>
                            <styleClass>
                               <String fx:value="plate" />
-                              <String fx:value="plate-title" />
+                              <String fx:value="plate-border" />
                            </styleClass>
-                        </MenuButton>
-                        <MenuButton fx:id="menuBtnSearchFilter1" mnemonicParsing="false" text="Sort By">
-                           <items>
-                              <RadioMenuItem mnemonicParsing="false" text="ISBN" />
-                              <RadioMenuItem mnemonicParsing="false" text="Title" />
-                              <RadioMenuItem mnemonicParsing="false" text="Subject" />
-                              <RadioMenuItem mnemonicParsing="false" text="Author" />
-                              <RadioMenuItem mnemonicParsing="false" text="Publisher" />
-                              <RadioMenuItem mnemonicParsing="false" text="Copies" />
-                              <RadioMenuItem mnemonicParsing="false" text="Date Published" />
-                           </items>
-                           <styleClass>
-                              <String fx:value="plate" />
-                              <String fx:value="plate-title" />
-                           </styleClass>
-                        </MenuButton>
+                        </VBox>
+                        <VBox VBox.vgrow="NEVER">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="plate-side-bar-bottom" VBox.vgrow="NEVER">
+                                 <children>
+                                    <VBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label text="Access As:">
+                                             <styleClass>
+                                                <String fx:value="plate-title" />
+                                                <String fx:value="label-access-as" />
+                                             </styleClass>
+                                          </Label>
+                                          <HBox alignment="CENTER">
+                                             <children>
+                                                <ChoiceBox prefWidth="150.0" styleClass="choice-box-access">
+                                                   <HBox.margin>
+                                                      <Insets right="10.0" />
+                                                   </HBox.margin>
+                                                </ChoiceBox>
+                                                <Button mnemonicParsing="false" styleClass="button-delete" text="Delete" />
+                                                <Button mnemonicParsing="false" styleClass="button-edit" text="Edit" />
+                                                <SplitMenuButton alignment="CENTER_RIGHT" mnemonicParsing="false" popupSide="TOP" styleClass="button-add" text="Add Item">
+                                                  <items>
+                                                    <MenuItem mnemonicParsing="false" text="Add Multiple Item" />
+                                                    <MenuItem mnemonicParsing="false" text="Import From File" />
+                                                  </items>
+                                                </SplitMenuButton>
+                                             </children>
+                                             <styleClass>
+                                                <String fx:value="plate-border" />
+                                                <String fx:value="plate-access-group-item" />
+                                             </styleClass>
+                                          </HBox>
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="plate" />
+                                          <String fx:value="plate-access-group" />
+                                       </styleClass>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
                      </children>
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin>
-                  </HBox>
-                  <TableView fx:id="dataTableView" VBox.vgrow="ALWAYS">
-                    <columns>
-                      <TableColumn fx:id="tableISBNColumn" editable="false" maxWidth="4000.0" minWidth="-1.0" sortable="false" text="ISBN">
-                           <styleClass>
-                              <String fx:value="table-column-alignment" />
-                              <String fx:value="table-column-justified" />
-                           </styleClass>
-                        </TableColumn>
-                      <TableColumn fx:id="tableTitleColumn" editable="false" minWidth="-1.0" sortable="false" text="Title" />
-                        <TableColumn fx:id="tableEditionColumn" editable="false" maxWidth="3000.0" minWidth="-1.0" sortable="false" text="Edition">
-                           <styleClass>
-                              <String fx:value="table-column-alignment" />
-                              <String fx:value="table-column-justified" />
-                           </styleClass>
-                        </TableColumn>
-                        <TableColumn fx:id="tableAuthorColumn" editable="false" minWidth="-1.0" sortable="false" text="Author" />
-                        <TableColumn fx:id="tablePublisherColumn" editable="false" minWidth="-1.0" sortable="false" text="Publisher" />
-                        <TableColumn fx:id="tableCopiesColumn" editable="false" maxWidth="2000.0" minWidth="-1.0" sortable="false" text="Copies">
-                           <styleClass>
-                              <String fx:value="table-column-alignment" />
-                              <String fx:value="table-column-justified" />
-                           </styleClass>
-                        </TableColumn>
-                        <TableColumn fx:id="tableDatePublishedColumn" editable="false" minWidth="-1.0" sortable="false" styleClass="table-column-alignment" text="Date Published" />
-                    </columns>
-                     <columnResizePolicy>
-                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                     </columnResizePolicy>
-                  </TableView>
-                  <HBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="5.0" styleClass="plate-side-bar" VBox.vgrow="SOMETIMES">
-                     <children>
-                        <Button mnemonicParsing="false" styleClass="button-show" text="Show" />
-                        <Button mnemonicParsing="false" styleClass="button-delete" text="Delete" />
-                        <Button mnemonicParsing="false" styleClass="button-edit" text="Edit" />
-                        <SplitMenuButton alignment="CENTER_RIGHT" mnemonicParsing="false" popupSide="TOP" styleClass="button-add" text="Add Item">
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Add Multiple Item" />
-                            <MenuItem mnemonicParsing="false" text="Import From File" />
-                          </items>
-                        </SplitMenuButton>
-                     </children>
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin>
-                  </HBox>
+                  </VBox>
                </children>
-            </VBox>
+            </HBox>
          </children>
       </VBox>
    </children>
