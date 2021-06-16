@@ -118,7 +118,7 @@ public class BookCatalogSceneController extends SceneController implements Initi
             accessModeGroupSubTitle.setText(newValue.message());
         });
 
-        accessModeChoiceBox.getSelectionModel().select(0);
+        accessModeChoiceBox.getSelectionModel().select(1);
 
     }
 
@@ -145,7 +145,7 @@ public class BookCatalogSceneController extends SceneController implements Initi
 
         @Override
         public String message() {
-            return null;
+            return "You can only view this database.";
         }
 
         @Override
@@ -157,15 +157,12 @@ public class BookCatalogSceneController extends SceneController implements Initi
     private class RequestOnChangeAccessMode implements AccessMode{
         @Override
         public void access() {
-            var pseudo = PseudoClass.getPseudoClass("requestOnChange");
-
-            accessModeGroupBox.pseudoClassStateChanged(pseudo, true);
 
         }
 
         @Override
         public String message() {
-            return null;
+            return "You can view and send a request changes.";
         }
 
         @Override
@@ -177,12 +174,12 @@ public class BookCatalogSceneController extends SceneController implements Initi
     private class FullAccessMode implements AccessMode{
         @Override
         public void access() {
-
+            //empty definition
         }
 
         @Override
         public String message() {
-            return null;
+            return "You have fully access to this database.";
         }
 
         @Override

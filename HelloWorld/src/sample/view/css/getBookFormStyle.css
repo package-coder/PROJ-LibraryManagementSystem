@@ -1,0 +1,11 @@
+
+.parent{
+    -fx-background-color: -fx-color-white;
+    -fx-padding: 1em;
+}
+
+.plate-center{
+    -fx-border-width: 0;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+}
