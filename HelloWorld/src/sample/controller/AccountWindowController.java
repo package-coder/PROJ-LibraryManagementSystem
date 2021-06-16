@@ -10,7 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.text.Font;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import sample.classes.Loader;
 import sample.model.Account;
@@ -44,8 +44,18 @@ public abstract class AccountWindowController implements Initializable, Loader {
         var scene = new Scene(loader.getRoot());
         stage.setScene(scene);
 
-        stage.setMinWidth(800.0);
-        stage.setMinHeight(500.0);
+        var screen = Screen.getPrimary();
+        var bounds = screen.getVisualBounds();
+
+
+//        primaryStage.setMinWidth(800.0);
+//        primaryStage.setMinHeight(500.0);
+
+        double width = bounds.getWidth() - (bounds.getWidth() * 0.15);
+        double height = bounds.getHeight() - (bounds.getHeight() * 0.10);
+
+        stage.setWidth(width);
+        stage.setHeight(height);
 
         stage.show();
 
@@ -95,9 +105,16 @@ public abstract class AccountWindowController implements Initializable, Loader {
         menuItems.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
 
         menuItems.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-            var node = items.get(newValue);
-            //Todo:FIXED Viewing
-            showSelectedMenuItem(node.getLoader().getRoot());
+            var controller = items.get(newValue);
+
+            for (var item : items.entrySet()){
+                if(!item.getKey().equals(newValue))
+                    item.getValue().notify(false);
+            }
+
+            controller.notify(true);
+
+            showSelectedMenuItem(controller.getLoader().getRoot());
         });
     }
 
@@ -132,6 +149,7 @@ public abstract class AccountWindowController implements Initializable, Loader {
 
         menuItems.getItems().add(item.getTitle());
         items.put(item.getTitle(), item);
+        item.setParent(menuItems);
     }
 
     protected void addMenuItemAll(List<SceneController> items){

@@ -122,4 +122,9 @@ public class BorrowBookSceneController extends SceneController implements Initia
 
         return lastName + ", " + firstName;
     }
+
+    @Override
+    public void notify(boolean isSelected) {
+
+    }
 }

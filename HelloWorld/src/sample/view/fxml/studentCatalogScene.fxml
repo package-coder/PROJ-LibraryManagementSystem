@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="507.0" prefWidth="758.0" styleClass="parent" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" VBox.vgrow="NEVER">
+               <children>
+                  <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label contentDisplay="BOTTOM" styleClass="plate-border-title" text="Student Catalog">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox alignment="CENTER" styleClass="plate-border" HBox.hgrow="ALWAYS">
+                     <children>
+                        <VBox alignment="CENTER" VBox.vgrow="NEVER">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" VBox.vgrow="NEVER">
+                                 <children>
+                                    <HBox alignment="CENTER" HBox.hgrow="NEVER">
+                                       <children>
+                                          <TextField fx:id="searchTextField" prefHeight="28.0" prefWidth="218.0" promptText="Search">
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                          </TextField>
+                                          <Button fx:id="resetButton" mnemonicParsing="false" styleClass="button-reset" text="Reset" />
+                                          <MenuButton fx:id="searchFilterMenuButton" mnemonicParsing="false" styleClass="menu-button-search-tool" text="Filters">
+                                             <items>
+                                                <RadioMenuItem mnemonicParsing="false" text="ISBN" />
+                                                <RadioMenuItem mnemonicParsing="false" text="Title" />
+                                                <RadioMenuItem mnemonicParsing="false" text="Subject" />
+                                                <RadioMenuItem mnemonicParsing="false" text="Author" />
+                                                <RadioMenuItem mnemonicParsing="false" text="Publisher" />
+                                                <RadioMenuItem mnemonicParsing="false" text="Copies" />
+                                                <RadioMenuItem mnemonicParsing="false" text="Date Published" />
+                                             </items>
+                                          </MenuButton>
+                                          <MenuButton fx:id="sortTableMenuButton" mnemonicParsing="false" styleClass="menu-button-search-tool" text="Sort">
+                                             <items>
+                                                <RadioMenuItem mnemonicParsing="false" text="Ascending" />
+                                                <RadioMenuItem mnemonicParsing="false" text="Descending" />
+                                             </items>
+                                          </MenuButton>
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="plate" />
+                                          <String fx:value="plate-top-bar" />
+                                       </styleClass>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" styleClass="plate">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <TableView fx:id="studentTableView" HBox.hgrow="ALWAYS">
+                                      <columns>
+                                        <TableColumn fx:id="studentIDTableColumn" editable="false" maxWidth="3000.0" minWidth="-1.0" sortable="false" styleClass="table-column-alignment" text="ID" />
+                                        <TableColumn fx:id="firstNameTableColumn" editable="false" minWidth="-1.0" sortable="false" text="First Name" />
+                                          <TableColumn fx:id="lastNameTableColumn" editable="false" minWidth="-1.0" sortType="DESCENDING" sortable="false" styleClass="table-column-alignment" text="Last Name" />
+                                          <TableColumn fx:id="genderTableColumn" editable="false" maxWidth="3000.0" minWidth="-1.0" sortable="false" styleClass="table-column-alignment" text="Gender" />
+                                          <TableColumn fx:id="emailTableColumn" editable="false" minWidth="-1.0" sortable="false" text="Email" />
+                                          <TableColumn fx:id="yearLevelTableColumn" editable="false" maxWidth="3000.0" minWidth="-1.0" sortable="false" text="Year Level" />
+                                          <TableColumn fx:id="departmentTableColumn" editable="false" minWidth="-1.0" sortable="false" styleClass="table-column-alignment" text="Department" />
+                                          <TableColumn fx:id="courseTableColumn" editable="false" minWidth="-1.0" sortable="false" styleClass="table-column-alignment" text="Course" />
+                                          <TableColumn fx:id="addressTableColumn" editable="false" minWidth="-1.0" sortable="false" styleClass="table-column-alignment" text="Address" />
+                                          <TableColumn fx:id="contactNumberTableColumn" editable="false" minWidth="-1.0" sortable="false" styleClass="table-column-alignment" text="Contact Number" />
+                                      </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" VBox.vgrow="NEVER">
+                           <children>
+                              <HBox alignment="CENTER">
+                                 <children>
+                                    <HBox HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <VBox HBox.hgrow="NEVER">
+                                             <children>
+                                                <HBox alignment="CENTER">
+                                                   <children>
+                                                      <CheckBox fx:id="dataSyncCheckBox" mnemonicParsing="false" selected="true" text="Sync Data" />
+                                                      <Button fx:id="refreshTableDataButton" disable="true" mnemonicParsing="false" text="Refresh" />
+                                                   </children>
+                                                   <styleClass>
+                                                      <String fx:value="plate" />
+                                                      <String fx:value="plate-top-bar" />
+                                                   </styleClass>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <VBox fx:id="accessModeGroupBox" alignment="CENTER_RIGHT">
+                                             <children>
+                                                <HBox>
+                                                   <children>
+                                                      <Label fx:id="accessModeGroupTitle" text="Access Mode:">
+                                                         <styleClass>
+                                                            <String fx:value="plate-title" />
+                                                            <String fx:value="label-access-moode" />
+                                                         </styleClass>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" styleClass="plate-border">
+                                                   <children>
+                                                      <ChoiceBox fx:id="accessModeChoiceBox" disable="true" styleClass="choice-box-access">
+                                                         <HBox.margin>
+                                                            <Insets right="10.0" />
+                                                         </HBox.margin>
+                                                      </ChoiceBox>
+                                                      <Button fx:id="deleteButton" mnemonicParsing="false" styleClass="button-delete" text="Delete" />
+                                                      <Button fx:id="updateButton" mnemonicParsing="false" styleClass="button-edit" text="Edit" />
+                                                      <SplitMenuButton fx:id="addItemButton" alignment="CENTER_RIGHT" mnemonicParsing="false" styleClass="button-add" text="Add Item">
+                                                         <items>
+                                                            <MenuItem mnemonicParsing="false" text="Add Multiple Item" />
+                                                            <MenuItem mnemonicParsing="false" text="Import From File" />
+                                                         </items>
+                                                      </SplitMenuButton>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT">
+                                                   <children>
+                                                      <Label fx:id="accessModeGroupSubTitle" text="Read Only Mode">
+                                                         <styleClass>
+                                                            <String fx:value="plate-title" />
+                                                            <String fx:value="label-mode-info" />
+                                                         </styleClass>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <styleClass>
+                                                <String fx:value="plate" />
+                                                <String fx:value="plate-access-group" />
+                                             </styleClass>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <stylesheets>
+      <URL value="@../css/style.css" />
+      <URL value="@../css/catalogStyle.css" />
+   </stylesheets>
+</AnchorPane>

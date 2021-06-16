@@ -8,6 +8,7 @@ public class DirectorAccountWindowController extends AccountWindowController {
     protected void initializeSubClass() {
 
         addMenuItem(new BookCatalogSceneController());
+        addMenuItem(new StudentCatalogSceneController());
         addMenuItem(new DirectorDashboardSceneController());
         addMenuItem(new BorrowBookSceneController());
 

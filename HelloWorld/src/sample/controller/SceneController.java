@@ -3,11 +3,12 @@ package sample.controller;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import sample.classes.Loader;
+import sample.classes.NotifyOnSelectProperty;
 import sample.model.Account;
 
 import java.io.IOException;
 
-public abstract class SceneController implements Loader {
+public abstract class SceneController implements Loader, NotifyOnSelectProperty {
 
     private final String title;
     private final String fxmlFilePath;

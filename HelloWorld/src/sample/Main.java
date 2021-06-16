@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.application.Application;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import sample.controller.DirectorAccountWindowController;
 
@@ -22,6 +23,7 @@ public class Main extends Application {
 //        primaryStage.show();
 
 //        MainController.load(null, primaryStage, new DirectorDashboardController()).show();
+
 
         var window = new DirectorAccountWindowController();
         window.load(null);
