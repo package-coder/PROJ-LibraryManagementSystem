@@ -196,22 +196,23 @@
 .list-view{
     -fx-background-insets: 0;
     -fx-border-insets: 0;
-    -fx-padding: 0;
 }
 
 .list-view .list-cell{
-    -fx-background-color: transparent;
-    -fx-border-width: 0;
-    -fx-border-color: gray;
-    -fx-padding: 15;
-    -fx-alignment: center;
+    -fx-font-family: "Rubik";
+    -fx-text-fill: -fx-color-lightblue1;
+    -fx-font-size: 1.05em;
+
+    -fx-padding: 1em 2em;
+    -fx-alignment: center-left;
 }
 
 .list-view .list-cell:hover,
 .list-view .list-cell:selected{
-    -fx-background-color: lightgray;
-    -fx-border-width: 0 0 0 4;
-    -fx-text-fill: gray;
+    -fx-border-width: 0 0 0 0.2em;
+    -fx-background-color: -fx-color-lightblue;
+    -fx-text-fill: -fx-color-blue;
+    -fx-border-color: -fx-color-blue;
 }
 
 
@@ -258,8 +259,8 @@
     -fx-background-color: transparent;
 }
 
-.table-row-cell:hover,
-.table-row-cell:selected{
+.table-row-cell:filled:hover,
+.table-row-cell:filled:focused:selected{
     -fx-text-background-color: #1075ee;
     -fx-background-color: #f2f9ff;
 }
